@@ -1,0 +1,20 @@
+// ! rx1310 <rx1310@inbox.ru> | Copyright (c) rx1310, 2020 | MIT License
+
+@use "sass:map";
+
+// ? Основные цвета темы Kalium
+// * Пример использования: map.get($k-colors, "accent")
+$k-colors: (
+	"accent": #4385f5,
+	"surface": #ffffff,
+	"background": #f6f6f6,
+	"font": #202020,
+	"warning": #fdbb34,
+	"success": #01c851,
+	"danger": #fe3548,
+	"info": #33b5e7,
+);
+
+$scrollbar: #111111 !default;
+$scrollbarThumb: #6d6d6d !default;
+$scrollbarTrack: $scrollbar !default;

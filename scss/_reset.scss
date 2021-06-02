@@ -15,19 +15,25 @@
   outline: none;
 }
 
+html { scroll-behavior: smooth; }
+
 @-ms-viewport { width: device-width; }
 @-o-viewport  { width: device-width; }
 @viewport     { width: device-width; }
 
 pre {
-  font-family: monospace, monospace;
-  font-size: 1em;
+	font: {
+		family: monospace, monospace;
+		size: 1em;
+	}
 }
 
 abbr[title] {
   border-bottom: none;
-  text-decoration: underline;
-  text-decoration: underline dotted;
+	text: {
+		decoration: underline;
+		decoration: underline dotted;
+	}
 }
 
 b,
@@ -36,8 +42,10 @@ strong { font-weight: bolder; }
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
+  font: {
+		family: monospace, monospace;
+		size: 1em;
+	}
 }
 
 sub,
@@ -70,6 +78,10 @@ textarea {
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
+	font: {
+		family: inherit;
+		size: 100%;
+	}
 }
 
 button,

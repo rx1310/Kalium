@@ -1,0 +1,60 @@
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+.text-align_left { text-align: left; }
+.text-align_right { text-align: right; }
+.text-align_center { text-align: center; }
+.text-align_justify { text-align: justify; }
+.text-nowrap { white-space: nowrap; }
+.text-lowercase { text-transform: lowercase; }
+.text-uppercase { text-transform: uppercase; }
+.text-capitalize { text-transform: capitalize; }
+.text-muted {
+	filter: alpha(opacity=50);
+  -moz-opacity: 0.50;
+       opacity: 0.50;
+}
+
+// from: https://developer.microsoft.com/en-us/fluentui#/styles/web/typography
+.text-size68 { font-size: 68px; }
+.text-size42 { font-size: 42px; }
+.text-size32 { font-size: 32px; }
+.text-size28 { font-size: 28px; }
+.text-size24 { font-size: 24px; }
+.text-size20 { font-size: 20px; }
+.text-size18 { font-size: 18px; }
+.text-size16 { font-size: 16px; }
+.text-size14 { font-size: 14px; }
+.text-size12 { font-size: 12px; }
+.text-size10 { font-size: 10px; }
+
+a {
+
+  $transition: opacity .30s;
+
+  color: var(--colorPrimary);
+  text-decoration: underline;
+
+  &:hover {
+		-moz-opacity: 0.35;
+				 opacity: 0.35;
+	}
+
+	&:active {
+		-moz-opacity: 0.15;
+				 opacity: 0.15;
+	}
+
+	@include setTransition($transition);
+
+}

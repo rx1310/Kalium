@@ -1,0 +1,25 @@
+@mixin setBorderRadius($top-left: $defaultBorderRadius, $top-right:null, $bottom-right:null, $bottom-left:null){
+  -webkit-border-radius: $top-left $top-right $bottom-right $bottom-left;
+     -moz-border-radius: $top-left $top-right $bottom-right $bottom-left;
+      -ms-border-radius: $top-left $top-right $bottom-right $bottom-left;
+          border-radius: $top-left $top-right $bottom-right $bottom-left;
+}
+
+@mixin setBoxShadow($boxShadow, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $boxShadow;
+    	 -moz-box-shadow:inset $boxShadow;
+    						box-shadow:inset $boxShadow;
+  } @else {
+    -webkit-box-shadow: $boxShadow;
+    	 -moz-box-shadow: $boxShadow;
+    				box-shadow: $boxShadow;
+  }
+}
+
+@mixin setTransition($transition) {
+  -webkit-transition: $transition; /* ? Safari, Chrome, iOS */
+     -moz-transition: $transition; /* ? Firefox */
+       -o-transition: $transition; /* ? Opera */
+          transition: $transition;
+}

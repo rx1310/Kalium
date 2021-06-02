@@ -1,0 +1,46 @@
+// ! rx1310 <rx1310@inbox.ru> | Copyright (c) rx1310, 2020 | MIT License
+
+table {
+
+  color: inherit;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin-bottom: 1em;
+
+  th,
+  td {
+    padding: 0.75em;
+    vertical-align: top;
+    border-top: 1px solid var(--colorDivider);
+  }
+
+  th { text-align: inherit; }
+
+  thead th {
+    vertical-align: bottom;
+    border-bottom: 3px solid var(--colorDivider);
+    border-top:none;
+  }
+
+  caption {
+    caption-side: bottom;
+    padding: .75em 0;
+    margin: 0 .75em;
+    text-align: left;
+  }
+
+  &.striped tbody tr:nth-of-type(odd) {
+		.theme-light & {
+			background-color: map-get-strict($grey-palette, 200);
+		}
+  }
+
+  &.scroll {
+    overflow-y: hidden;
+    overflow-x: visible;
+    white-space: nowrap;
+    display: inline-block;
+  }
+
+}

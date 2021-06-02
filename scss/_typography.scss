@@ -47,6 +47,7 @@ a {
   $transition: opacity .30s;
 
   color: var(--colorPrimary);
+	background: transparent;
   text-decoration: underline;
 
   &:hover {

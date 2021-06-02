@@ -12,16 +12,18 @@ $k-theme: (
 		colorFont: map-get-strict($grey-palette, 900),
 		colorBackground: map-get-strict($grey-palette, 100),
 		colorSurface: map-get-strict($grey-palette, A100),
+		colorDivider: map-get-strict($grey-palette, A400),
 		scrollbar: map-get-strict($grey-palette, 100),
 		scrollbarThumb: map-get-strict($grey-palette, 900),
 	),
 
 	dark: (
 		colorPrimary: map-get-strict($purple-palette, 200),
-		colorSecondary: map-get-strict($blue-palette, 200),
+		colorSecondary: map-get-strict($pink-palette, 200),
 		colorFont: map-get-strict($grey-palette, A100),
 		colorBackground: #121212,
 		colorSurface: map-get-strict($grey-palette, 900),
+		colorDivider: map-get-strict($grey-palette, 800),
 		scrollbar: #121212,
 		scrollbarThumb: map-get-strict($grey-palette, 600),
 	)

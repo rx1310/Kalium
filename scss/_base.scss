@@ -2,6 +2,27 @@
 
 @use "sass:map";
 
+@-ms-viewport { width: device-width; }
+@-o-viewport  { width: device-width; }
+@viewport     { width: device-width; }
+
+*,
+*::before,
+*::after {
+  -webkit-touch-callout: none; // https://clck.ru/9HHvq
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+       -o-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  outline: none;
+}
+
+// html { scroll-behavior: smooth; }
+
 body {
 
 	color: var(--colorFont);
@@ -29,9 +50,57 @@ body {
 	@include setBorderRadius();
 }
 
+hr {
+  border: 0;
+  border-top: 1px solid var(--colorDivider);
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+	font: {
+		family: monospace, monospace;
+		size: 1em;
+	}
+}
+
+abbr[title] {
+  border-bottom: none;
+	text: {
+		decoration: underline;
+		decoration: underline dotted;
+	}
+}
+
+b,
+strong { font-weight: bolder; }
+
+code,
+kbd,
+samp {
+  font: {
+		family: monospace, monospace;
+		size: 1em;
+	}
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub { bottom: -0.25em; }
+sup { top: -0.5em; }
+small { font-size: 80%; }
+
 img {
 
-  overflow: none;
+  border-style: none;
+	overflow: none;
   max-width: 100%;
   max-height: 100%;
   vertical-align: middle;
@@ -50,4 +119,81 @@ img {
 
 	}
 
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+	font: {
+		family: inherit;
+		size: 100%;
+	}
+}
+
+button,
+input { overflow: visible; }
+
+button,
+select { text-transform: none; }
+
+fieldset { padding: 0.35em 0.75em 0.625em; }
+progress { vertical-align: baseline; }
+textarea { overflow: auto; }
+details { display: block; }
+summary { display: list-item; }
+template { display: none; }
+
+fieldset:disabled,
+button:disabled {
+  pointer-events: none;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+[hidden] { display: none !important; }
+
+[disabled] {
+  pointer-events: none;
+  cursor: not-allowed;
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.50;
+       opacity: 0.50;
 }

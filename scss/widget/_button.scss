@@ -22,19 +22,55 @@ button {
   letter-spacing: .1em;
   font-size: 80%;
 
+	display: inline-block;
+  cursor: pointer;
+  margin: 0;
+  width: auto;
+  overflow: hidden;
+  background: transparent;
+  line-height: normal;
+  vertical-align: middle;
+  text-align: center;
+  -moz-osx-font-smoothing: inherit;
+   -webkit-font-smoothing: inherit; // https://clck.ru/NfTMr
+
+  &:focus { outline: 0; }
+
   @include setBorderRadius(.5em);
   @include setTransition($transition);
 	//@include setBoxShadow(0px 5px 10px -6px rgba(0, 0, 0, 0.589));
 
 	&:hover {
 		background-color: var(--colorPrimary);
-		color: white;
+		color: var(--colorBackground);
 	}
 
 	&:active {
 		background-color: var(--colorSecondary);
 		border-color: var(--colorSecondary);
-		color: white;
+		color: var(--colorBackground);
 	}
 
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted royalblue;
 }

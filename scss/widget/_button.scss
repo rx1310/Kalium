@@ -1,0 +1,40 @@
+@use "sass:map";
+
+@import '../_palette';
+@import 'function/function';
+
+button {
+
+  $transition:
+   background-color .30s ease-out,
+   border-color .30s,
+   color .30s;
+
+	color: var(--colorPrimary);
+	border: 2px solid var(--colorPrimary);
+  box-sizing: border-box;
+  position: relative;
+  padding: .5em .8em;
+  min-width: 64px;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: .1em;
+  font-size: 80%;
+
+  @include setBorderRadius(.5em);
+  @include setTransition($transition);
+	//@include setBoxShadow(0px 5px 10px -6px rgba(0, 0, 0, 0.589));
+
+	&:hover {
+		background-color: var(--colorPrimary);
+		color: white;
+	}
+
+	&:active {
+		background-color: var(--colorSecondary);
+		border-color: var(--colorSecondary);
+		color: white;
+	}
+
+}

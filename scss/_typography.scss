@@ -1,7 +1,11 @@
 
 h1, h2, h3, h4, h5, h6 {
+
   margin-bottom: 0.5rem;
   font-weight: bold;
+
+	@extend .anchor;
+
 }
 
 h1 { font-size: 2.5rem; }
@@ -56,5 +60,36 @@ a {
 	}
 
 	@include setTransition($transition);
+
+}
+
+.anchor {
+
+	color: inherit;
+	text-decoration: none;
+
+	&::before {
+
+		$transition: opacity .30s ease-out;
+
+		content: "# ";
+		// cursor: pointer;
+		color: var(--colorPrimary);
+		text-decoration: none;
+		opacity: 0.2;
+
+		@include setTransition($transition);
+
+	}
+
+	&[data-anchor]::before {
+		content: attr(data-anchor);
+	}
+
+	&:hover:before{	opacity: 1; }
+	&:hover {
+		-moz-opacity: 1;
+				 opacity: 1;
+	}
 
 }

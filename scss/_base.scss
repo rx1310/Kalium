@@ -40,31 +40,14 @@ img {
   &.round { @include setBorderRadius(100%); }
   &.rounded { @include setBorderRadius(); }
 
-}
+	& ~ small {
 
-.anchor {
+		text-align: center;
+		display: block;
 
-	color: inherit;
-	text-decoration: none;
+		-moz-opacity: 0.40;
+				 opacity: 0.40;
 
-	&::before {
-
-		$transition: opacity .30s ease-out;
-
-		content: "# ";
-		cursor: pointer;
-		color: var(--colorPrimary);
-		text-decoration: none;
-		opacity: 0.2;
-
-		@include setTransition($transition);
-
-	}
-
-	&:hover:before{	opacity: 1; }
-	&:hover {
-		-moz-opacity: 1;
-				 opacity: 1;
 	}
 
 }

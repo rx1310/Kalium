@@ -1,28 +1,29 @@
 @use "sass:map";
 
 @import '_palette';
+@import 'function/function';
 
 // ? Основные цвета темы Kalium
 $k-theme: (
 
 	light: (
-		colorPrimary: map.get($blue-grey-palette, 500),
-		colorSecondary: map.get($orange-palette, 500),
-		colorFont: map.get($grey-palette, 900),
-		colorBackground: map.get($grey-palette, 100),
-		colorSurface: map.get($grey-palette, A100),
-		scrollbar: map.get($grey-palette, 100),
-		scrollbarThumb: map.get($grey-palette, 900),
+		colorPrimary: map-get-strict($blue-grey-palette, 500),
+		colorSecondary: map-get-strict($orange-palette, 500),
+		colorFont: map-get-strict($grey-palette, 900),
+		colorBackground: map-get-strict($grey-palette, 100),
+		colorSurface: map-get-strict($grey-palette, A100),
+		scrollbar: map-get-strict($grey-palette, 100),
+		scrollbarThumb: map-get-strict($grey-palette, 900),
 	),
 
 	dark: (
-		colorPrimary: map.get($purple-palette, 200),
-		colorSecondary: map.get($blue-palette, 200),
-		colorFont: map.get($grey-palette, A100),
+		colorPrimary: map-get-strict($purple-palette, 200),
+		colorSecondary: map-get-strict($blue-palette, 200),
+		colorFont: map-get-strict($grey-palette, A100),
 		colorBackground: #121212,
-		colorSurface: map.get($grey-palette, 900),
+		colorSurface: map-get-strict($grey-palette, 900),
 		scrollbar: #121212,
-		scrollbarThumb: map.get($grey-palette, 600),
+		scrollbarThumb: map-get-strict($grey-palette, 600),
 	)
 
 );
@@ -34,3 +35,4 @@ $k-theme: (
 			}
 	}
 }
+

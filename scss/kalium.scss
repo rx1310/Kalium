@@ -9,10 +9,13 @@
 
 // ? Основные стили
 @import '_vars';
+@import '_theme';
 @import '_reset';
 @import '_base';
-@import '_theme';
 @import '_typography';
+
+// ? Дополнительные стили
+@import 'widget/button';
 
 // ? Twitter Bootstrap Grid (https://github.com/rx1310/workspace/tree/master/BootstrapGrid/SASS)
 @import '_grid/functions';

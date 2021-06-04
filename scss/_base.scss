@@ -198,28 +198,3 @@ legend {
   -moz-opacity: 0.50;
        opacity: 0.50;
 }
-
-.splash {
-
-	width: 100vw;
-	height: 100vh;
-	display: flex;
-  align-items: center;
-  justify-content: center;
-
-	&[splash="colored"] {
-
-		@media (max-width: 425px) and (orientation: portrait) {
-			background: var(--colorPrimary);
-			color: var(--colorBackground);
-
-			button {
-				color: var(--colorBackground);
-				border: 2px solid var(--colorBackground);
-			}
-
-		}
-
-	}
-
-}

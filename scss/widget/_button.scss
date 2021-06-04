@@ -21,7 +21,6 @@ button {
   font-weight: bold;
   letter-spacing: .1em;
   font-size: 80%;
-
 	display: inline-block;
   cursor: pointer;
   margin: 0;
@@ -51,6 +50,7 @@ button {
 		color: var(--colorBackground);
 	}
 
+
 }
 
 button,
@@ -73,4 +73,39 @@ button:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
   outline: 1px dotted royalblue;
+}
+
+
+// ? ButtonGroup
+.group {
+
+	display: inline-flex;
+	border: 2px solid var(--colorPrimary);
+	overflow: hidden;
+
+	@include setBorderRadius(.5em);
+
+	&.block {
+
+		display: flex;
+
+		button {
+			flex-grow: 1;
+		}
+
+	}
+
+	& > button {
+
+		border: none;
+		border-right: 2px solid var(--colorPrimary);
+
+		@include setBorderRadius(0);
+
+		&:last-child {
+			border-right: none;
+		}
+		
+	}
+
 }

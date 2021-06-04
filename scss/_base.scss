@@ -113,6 +113,7 @@ img {
 
 		text-align: center;
 		display: block;
+		margin-top: 10px;
 
 		-moz-opacity: 0.40;
 				 opacity: 0.40;
@@ -207,7 +208,7 @@ legend {
   justify-content: center;
 
 	&[splash="colored"] {
-		
+
 		@media (max-width: 425px) and (orientation: portrait) {
 			background: var(--colorPrimary);
 			color: var(--colorBackground);

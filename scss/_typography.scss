@@ -87,6 +87,10 @@ a {
 		content: attr(data-anchor);
 	}
 
+	&[data-anchor="none"]::before {
+		content: "";
+	}
+
 	&:hover:before{	opacity: 1; }
 	&:hover {
 		-moz-opacity: 1;

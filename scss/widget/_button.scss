@@ -98,14 +98,16 @@ button:-moz-focusring,
 	& > button {
 
 		border: none;
-		border-right: 2px solid var(--colorPrimary);
+		///margin: 0;
+		margin: 1px;
+		//border-right: 2px solid var(--colorPrimary);
 
-		@include setBorderRadius(0);
+		//@include setBorderRadius(0);
 
 		&:last-child {
-			border-right: none;
+			//border-right: none;
 		}
-		
+
 	}
 
 }

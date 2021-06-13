@@ -21,6 +21,16 @@
   outline: none;
 }
 
+* {
+
+	$transition:
+		background-color .20s,
+		border-color .20s,
+		color .05s;
+
+	@include setTransition($transition);
+}
+
 // html { scroll-behavior: smooth; }
 
 body {

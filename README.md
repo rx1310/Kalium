@@ -1,9 +1,6 @@
-<div>
-<img src="k19_logo.png" alt="Logo" align="left" width="20%"/> Kalium19
-======
-Небольшой UI-фреймворк, разрабатываемый для (себя) верстки небольших и простых веб-сайтов.
-</div>
+<img src="k19_logo.png" width="20%">
 
+# Kalium19
 ![Visitors count badge](https://visitor-badge.laobi.icu/badge?page_id=rx1310.kalium19)
 [![License badge](https://img.shields.io/github/license/rx1310/kalium19)](https://github.com/rx1310/kalium19/blob/master/LICENSE)
 ![Code size badge](https://img.shields.io/github/languages/code-size/rx1310/kalium19)
@@ -16,6 +13,8 @@
 [![Last commit date badge](https://img.shields.io/github/last-commit/rx1310/kalium19)](https://github.com/rx1310/a2iga/commits/master)
 [![GitHub contributors](https://img.shields.io/github/contributors/rx1310/kalium19.svg)](https://github.com/rx1310/kalium19/graphs/contributors/)
 [![GitHub Discussions](https://img.shields.io/github/discussions/rx1310/kalium19)](https://github.com/rx1310/kalium19/discussions)
+
+Небольшой UI-фреймворк, разрабатываемый для (себя) верстки небольших и простых веб-сайтов.
 
 Kalium19 пишется для личного пользования и постоянно вносятся какие-то радикальные правки, а поэтому использовать на "продакшене" не стоит. Да и что тут использовать 🤷‍♂️
 

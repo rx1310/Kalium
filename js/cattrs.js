@@ -5,19 +5,58 @@
  ? которые позволяют кастомизировать стили прямо в HTML,
  ? не открывая таблицу стилей. */
 
-const attrColor = document.querySelectorAll('[k-color]'),
-			attrBackground = document.querySelectorAll('[k-bg]'),
-			attrPadding = document.querySelectorAll('[k-padding]'),
-			attrMarging = document.querySelectorAll('[k-margin]');
+document.querySelectorAll('[k-color]').forEach(element => {
+	element.style.color = element.getAttribute('k-color');
+});
 
-// ? Example: <p k-color="#ff0000">...</p>
-attrColor.forEach(element => { element.style.color = element.getAttribute('k-color'); })
+document.querySelectorAll('[k-bg]').forEach(element => {
+	element.style.background = element.getAttribute('k-bg');
+});
 
-// ? Example: <div k-bg="../assets/images/img.jpg">...</div> or <div k-bg="#ffffff">...</div>
-attrBackground.forEach(element => { element.style.background = "url(" + element.getAttribute("k-bg") + ")"; })
+document.querySelectorAll('[k-bg-url]').forEach(element => {
+	element.style.background = "url(" + element.getAttribute("k-bg-url") + ")";
+});
 
-// ? Example: <div k-padding="1em">...</div> or <div k-padding="1em 1.5em">...</div>
-attrPadding.forEach(element => { element.style.padding = element.getAttribute('k-padding'); })
+document.querySelectorAll('[k-margin]').forEach(element => {
+	element.style.margin = element.getAttribute('k-margin');
+});
 
-// ? Example: <div k-margin="1em">...</div> or <div k-margin="1em 1.5em">...</div>
-attrMarging.forEach(element => { element.style.margin = element.getAttribute('k-margin'); })
+document.querySelectorAll('[k-margin-t]').forEach(element => {
+	element.style.marginTop = element.getAttribute('k-margin-t');
+});
+
+document.querySelectorAll('[k-margin-b]').forEach(element => {
+	element.style.marginBottom = element.getAttribute('k-margin-b');
+});
+
+document.querySelectorAll('[k-margin-l]').forEach(element => {
+	element.style.marginLeft = element.getAttribute('k-margin-l');
+});
+
+document.querySelectorAll('[k-margin-r]').forEach(element => {
+	element.style.marginRight = element.getAttribute('k-margin-r');
+});
+
+document.querySelectorAll('[k-padding]').forEach(element => {
+	element.style.margin = element.getAttribute('k-padding');
+});
+
+document.querySelectorAll('[k-padding-t]').forEach(element => {
+	element.style.paddingTop = element.getAttribute('k-padding-t');
+});
+
+document.querySelectorAll('[k-padding-b]').forEach(element => {
+	element.style.paddingBottom = element.getAttribute('k-padding-b');
+});
+
+document.querySelectorAll('[k-padding-l]').forEach(element => {
+	element.style.paddingLeft = element.getAttribute('k-padding-l');
+});
+
+document.querySelectorAll('[k-padding-r]').forEach(element => {
+	element.style.paddingRight = element.getAttribute('k-padding-r');
+});
+
+// document.querySelectorAll('[k-]').forEach(element => {
+// 	element.style. = element.getAttribute('k-');
+// });

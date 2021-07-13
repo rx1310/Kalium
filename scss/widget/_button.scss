@@ -93,6 +93,10 @@ button:-moz-focusring,
 			flex-grow: 1;
 		}
 
+		&.vertical {
+			flex-flow: column;
+		}
+
 	}
 
 	& > button {
@@ -109,5 +113,7 @@ button:-moz-focusring,
 		}
 
 	}
+
+
 
 }
